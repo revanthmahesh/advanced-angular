@@ -1,0 +1,42 @@
+html{overflow-x:hidden}
+.label{text-align:left;padding:0}
+.nam-cou-left-panel.col-sm-3{background: #f9f9f9;border: 1px solid #979797;padding:0}
+/* left side panel */
+.nam-coupon-tabs li a {background-color: rgba(107, 107, 107, 0.72);border: 0;color: #fff;}
+.nam-coupon .nav-tabs>li.active>a, .nam-coupon .nav-tabs>li.active>a:focus, .nam-coupon .nav-tabs>li.active>a:hover, .nam-coupon .nav>li>a:hover{background-color: rgb(105, 197, 228);border:0;color:#fff}
+.nam-coupon .nav-tabs>li>a{margin-right:0;border:0;border-radius:0;padding:7px 10px;text-align:center}
+.nam-coupon .nav-tabs>li{width:50%;}
+.nam-cou-con-heading{color:#282828;border-bottom: 1px solid #ddd;cursor:pointer;margin-top: 30px}
+.nam-coupon  .nam-cou-left-con .tab-content{padding:10px;overflow:auto}
+.cou-drag-ele {display:inline-block;width:50%;text-align:center;cursor:pointer;height:60px;vertical-align:text-bottom}
+.cou-drag-ele img{width:30px;}
+.cou-drag-ele p{color:#0072ae;font-size:90%}
+.cou-drag-ele i{font-size: 15px;color: #6d6b6b;}
+.nam-cou-config-sec{display:table;width:100%;margin-bottom:15px}
+.nam-cou-config-sec .nam-cou-config-ele{display:table-cell;padding:0;vertical-align:middle}
+.nam-cou-config-sec .nam-cou-config-ele label{font-weight:normal;margin-bottom:0}
+.nam-cou-config-sec .nam-cou-config-ele:nth-child(1){width:40%}
+.nam-cou-config-sec .nam-cou-config-ele:nth-child(2){width:40%}
+.nam-cou-edit-container{padding:10px;overflow:hidden}
+.nam-cou-edit-save-btn{width:100%;float:left;margin-bottom:20px}
+.form-control{color:#000}
+.collapsed .fa-chevron-down{display:none}
+.nam-cou-con-heading .fa-chevron-up{display:none}
+.nam-cou-con-heading.collapsed .fa-chevron-up{display:inline}
+.tab-content{overflow:auto}
+.nam-cou-config-sec .nam-cou-config-ele.nam-temp-check{display:block;width:100%;margin-left:17%}
+/* right side pannel */
+.nam-temp-config-icons{position:absolute;width:100%;}
+.cou-con-icon{cursor:pointer;float:right;margin:5px 5px}
+.gridster-loaded .gridster-item{border:1px solid #ddd}
+.nam-cou-field-image img{max-width:100%} 
+.nam-temp-gridster{margin-top:50px;position:absolute;margin-top: 50px;}
+.cou-drop-area{padding:0}
+select.form-control{width:84%}
+/*.nam-builder-btn-sec{float: right !important;padding:10px; }*/
+.cou-component{border:1px solid }
+
+
+
+ul.nav.nav-tabs.nam-coupon-tabs{position: fixed;width: 16.6%;z-index: 1050;background: #fff;}
+.nam-builder-btn-sec {padding: 10px;position: fixed;width: 83%;text-align: right;z-index:1050;}

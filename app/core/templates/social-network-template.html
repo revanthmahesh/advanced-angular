@@ -1,0 +1,54 @@
+<!-- <span ng-show="isFacebook" style="padding:10px;" class="fb-share-button" data-href="http://www.smartsource.ca/smartsource2/index.jsp?Link=XJWQY4LLFAWEQ&sm=true&check=37239&fi=37239&locale=en_CA" data-size="large" data-layout="button_count" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="">Share</a></span> 
+<span id="fb-root"></span>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=1398498840192473";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+<span ng-show="isTwitter"   style="padding:10px;" ><a href="https://twitter.com/share" class="twitter-share-button"   data-url="" data-size="large"  data-text="custom share text" data-via="Revanthmahesh">Tweet</a></span>
+ 
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+<p ng-show="isFacebook" style="padding: 15px 30px 0px 20px;display: inline-block;"><a href="#" socialshare socialshare-provider="facebook" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="">
+<span class="fa fa-facebook-official" aria-hidden="true" style="transform:scale(2, 2);"></p>
+</a></span>
+<p ng-show="isTwitter"  style="padding: 15px 30px 0px 20px;display: inline-block;"><a href="#" socialshare socialshare-provider="twitter" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://www.healthyessentials.com/coupons/save-1-johnsons-desitin"><i class="fa fa-twitter" aria-hidden="true" style="transform:scale(2, 2);"></i>
+
+</a></p>
+<p  ng-show="isEmail" style="padding: 15px 30px 0px 20px; cursor: pointer;display: inline-block;" ><i class="fa fa-envelope" aria-hidden="true"  data-toggle="modal" data-target="#myModal" style="transform:scale(2, 2);"></i></p>
+
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div style="background-color: red;">
+        <h4 class="modal-title" style="font-size: 18px;color: white;padding:5px">Smart Source</h4>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
+
+ <span ng-show="isClip"   style="float: right; padding:15px 30px;" ><label for="check" ng-show="!isClipped" style="padding-right: 10px">CLIP</label><label for="check" ng-show="isClipped" style="padding-right: 10px">CLIPPED</label><input  type="checkbox" id="check"  ng-change="Clipped(isClipped)" ng-model="isClipped" style="transform:scale(1.5, 1.5);"></span>
+

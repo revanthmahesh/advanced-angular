@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<link href="app/theme/css/angular-gridster.min.css" rel="stylesheet" /> 
+	<link href="app/theme/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="app/theme/css/bootstrap-datepicker.css" rel="stylesheet" />
+	<link href="app/theme/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="app/theme/css/colorpicker.min.css" rel="stylesheet" />
+	<link href="app/theme/css/theme-bucket.css" rel="stylesheet" />
+	<link href="app/theme/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <script src="app/lib/jquery.min.js"></script>
+  <script src="app/lib/jquery.ui.js"></script>
+  <script src="app/lib/angular.js"></script>
+  <script src="app/lib/bootstrap.min.js"></script>
+  <script src="app/lib/bootstrap-colorpicker-module.min.js"></script>
+  <script src="app/lib/angular-gridster.js"></script>
+  <script src="app/lib/angular-sanitize.min.js"></script>
+   <script src="app/lib/socialShared.js"></script>
+  <script src="app/core/app.js"></script>
+  <script src="app/core/controllers/coupon-controller.js"></script>
+  <script src="app/core/directives/coupon-draggable.js"></script>
+  <script src="app/core/directives/coupon-draggable-element.js"></script>
+  <script src="app/core/directives/coupon-droppable.js"></script>
+  <script src="app/core/directives/coupon-resizable.js"></script>
+  <script src="app/core/directives/common-directive.js"></script>
+  <script src="app/core/controllers/common-controller.js"></script>
+  <script src="app/core/directives/coupon-product-directive.js"></script>
+  <script src="app/core/controllers/coupon-product-controller.js"></script>
+  <script src="app/core/directives/coupon-barcode-directive.js"></script>
+  <script src="app/core/controllers/coupon-barcode-controller.js"></script>
+  <script src="app/core/directives/coupon-border-directive.js"></script>
+  <script src="app/core/controllers/coupon-border-controller.js"></script>
+  <script src="app/core/directives/coupon-consumer-message-directive.js"></script>
+  <script src="app/core/controllers/coupon-consumer-message-controller.js"></script>
+  <script src="app/core/directives/coupon-expiry-date-directive.js"></script>
+  <script src="app/core/controllers/coupon-expiry-date-controller.js"></script>
+  <script src="app/core/directives/coupon-discount-directive.js"></script>
+  <script src="app/core/controllers/coupon-discount-controller.js"></script>
+  <script src="app/core/directives/coupon-offerid-directive.js"></script>
+  <script src="app/core/controllers/coupon-offerid-controller.js"></script>
+  <script src="app/core/directives/coupon-offer-heading-directive.js"></script>
+  <script src="app/core/controllers/coupon-offer-heading-controller.js"></script>
+  <script src="app/core/directives/coupon-offer-description-directive.js"></script>
+  <script src="app/core/controllers/coupon-offer-description-controller.js"></script>
+  <script src="app/core/directives/coupon-text-directive.js"></script>
+  <script src="app/core/controllers/coupon-text-controller.js"></script>
+  <script src="app/core/directives/coupon-pin-number-directive.js"></script>
+  <script src="app/core/controllers/coupon-pin-number-controller.js"></script>
+  <script src="app/core/directives/coupon-retailer-message-directive.js"></script>
+  <script src="app/core/controllers/coupon-retailer-message-controller.js"></script>
+  <script src="app/core/directives/coupon-watermark-directive.js"></script>
+  <script src="app/core/controllers/coupon-watermark-controller.js"></script>
+<script src="app/core/directives/social-network-directive.js"></script>
+<script src="app/core/controllers/socialNetworkController.js"></script>
+<script src="app/core/directives/coupon-button-directive.js"></script>
+<script src="app/core/controllers/coupon-button-controller.js"></script>	
+<script src="app/core/directives/coupon-codeblock-directive.js"></script>
+<script src="app/core/controllers/coupon-codeblock-controller.js"></script>	
+<script src="app/core/directives/facebook-share-directive.js"></script>
+<script src="app/core/controllers/facebook-share-controller.js"></script>	
+<script src="app/core/directives/twitter-share-directive.js"></script>
+<script src="app/core/controllers/twitter-share-controller.js"></script>	
+<script src="app/core/directives/email-share-directive.js"></script>
+<script src="app/core/controllers/email-share-controller.js"></script>
+<script src="app/core/directives/coupon-footer-directive.js"></script>
+<script src="app/core/controllers//coupon-footer-controller.js"></script>
+<script src="app/core/directives/coupon-header-directive.js"></script>
+<script src="app/core/controllers//coupon-header-controller.js"></script>
+<script src="app/core/directives/coupon-pod-directive.js"></script>
+<script src="app/core/controllers/coupon-pod-controller.js"></script>
+<script src="app/core/directives/coupon-total-saving-directive.js"></script>
+<script src="app/core/controllers/coupon-total-saving-controller.js"></script>
+<script src="app/core/directives/coupon-container-directive.js"></script>
+<script src="app/core/controllers/coupon-container-controller.js"></script>
+<script src="app/core/directives/coupon-background-add-directive.js"></script>
+<script src="app/core/controllers/coupon-background-add-controller.js"></script>
+<script src="app/core/directives/coupon-medium-add-directive.js"></script>
+<script src="app/core/controllers/coupon-medium-add-controller.js"></script>
+<script src="app/core/directives/coupon-seperator-add-directive.js"></script>
+<script src="app/core/controllers/coupon-seperator-add-controller.js"></script>
+<script src="app/core/directives/coupon-facebook-link-directive.js"></script>
+<script src="app/core/controllers/coupon-facebook-link-controller.js"></script>
+<script src="app/core/directives/coupon-twitter-link-directive.js"></script>
+<script src="app/core/controllers/coupon-twitter-link-controller.js"></script>
+<script src="app/core/directives/coupon-email-news-subscription-directive.js"></script>
+<script src="app/core/controllers/coupon-email-news-subscription-controller.js"></script>
+<script src="app/core/directives/coupon-mobile-link-directive.js"></script>
+<script src="app/core/controllers/coupon-mobile-link-controller.js"></script>
+<script src="app/core/directives/coupon-zipcode-filter-directive.js"></script>
+<script src="app/core/controllers/coupon-zipcode-filter-controller.js"></script>
+<script src="app/core/directives/coupon-category-filter-directive.js"></script>
+<script src="app/core/controllers/coupon-category-filter-controller.js"></script>
+</head>
+</head>
+
+<body class='nam-coupon' ng-app="couponApp" ng-controller='couponController'>
+		<section class="">
+		
+			<div class="col-lg-2 col-md-3 col-sm-3 nam-cou-left-panel nam-com-height">
+				<section class="nam-cou-left-con">			
+					<ul class="nav nav-tabs nam-coupon-tabs" ng-init="showControls=true;showTemplate=false;showThemes=false">
+						<li class="active" ng-class="{'active':showControls}"><a  href="javascript:void(0)" ng-click="showControls=true;showTemplates=false;" >Controls</a></li>
+						<li  ng-class="{'active':showTemplates}"><a  href="javascript:void(0)" ng-click="showControls=false;showTemplates=true">Templates</a></li>
+						<!-- <li ng-class="{'active':showThemes}"><a  href="javascript:void(0)" ng-click="showThemes=!showThemes;showControls=false;showTemplates=flase;">Themes</a></li> -->
+					</ul>
+					<div class="tab-content"  ng-show="!editMode" id="sideBar" style="min-height:{{leftPanelHeight}}px;height:794px;overflow: auto;">
+						<div id="controls" class="tab-pane fade" ng-show="showControls" ng-class="{'active':showControls, 'in':showControls}">
+						<div ng-repeat="item in dragItem track by $index" >
+							<p class="nam-cou-con-heading" data-toggle="collapse" data-target="#{{item.dataTarget}}{{$index}}" ng-click="toggle($index)"><b>{{item.displayName}}</b><i class="fa fa-chevron-down pull-right" aria-hidden="true"></i><i class="fa fa-chevron-up pull-right" aria-hidden="true"></i></p>
+
+							<div id="{{item.dataTarget}}{{$index}}" class="collapse" >
+								<div class="cou-drag-ele " ng-repeat="ele in item.controls track by $index" draggable item-type="{{ele.type}}" display-type="{{item.displayName}}"><i class="fa {{ele.imageName}}" aria-hidden="true"></i><p>{{ele.displayName}}</p></div>
+								<div ng-show="{{item.isPODSocial}}" ng-repeat="type in PODsocial track by $index">
+								<p style="color: #0072ae;"><input type="checkbox" name="check-box" ng-model="check" ng-change="$root.Social(check,$index)" >{{type}}<br></p>
+								
+								</div>
+								<!-- <div ng-show="{{item.isOffSocial}}">
+									<p style="color: #0072ae;"><input type="checkbox" name="check-box" ng-model="isFacebookShare" ng-change="$root.Facebook(isFacebookShare)">Enable Facebook <br></p>
+								</div>
+								<div ng-show="{{item.isOffSocial}}">
+									<p style="color: #0072ae;"><input type="checkbox" name="check-box" ng-model="isTwitterShare" ng-change="$root.twitter(isTwitterShare)">Enable Twitter <br></p>
+								</div>
+								<div ng-show="{{item.isOffSocial}}">
+									<p style="color: #0072ae;"><input type="checkbox" name="check-box" ng-model="isEmailShare" ng-change="$root.email(isEmailShare)">Enable Email <br></p>
+								</div> -->
+								
+								<div ng-show="{{item.isOffSocial}}" ng-repeat="type in Offsocial track by $index">
+								<p style="color: #0072ae;"><input type="checkbox" name="check-box" ng-model="checked" ng-change="OfferSocial(checked,$index)">{{type}}<br></p>
+								
+								</div>
+
+								<div ng-show="{{item.isPartnerSocial}}" ng-repeat="type in partnersocial track by $index">
+								<p style="color: #0072ae;"><input type="checkbox" name="check-box" ng-model="checked" ng-change="PartnersiteSocial(checked,$index)">{{type}}<br></p>
+								
+								</div>
+								
+								
+								
+							</div>
+						</div>
+						<div>
+								<p class="nam-cou-con-heading"><b>Settings</b></p>
+								<div class="nam-cou-config-sec">
+									<div class="nam-cou-config-ele">
+										<label>Width</label>
+									</div>
+									<div class="nam-cou-config-ele">
+										<input type="text" class="form-control" ng-model="schema.templateWidth"/>
+									</div>
+								</div>
+								<div class="nam-cou-config-sec">
+									<div class="nam-cou-config-ele">
+										<label>Height</label>
+									</div>
+									<div class="nam-cou-config-ele">
+										<input type="text" class="form-control" ng-model="schema.templateHeight"/>
+									</div>
+								</div>
+								<div class="nam-cou-config-sec">
+									<div class="nam-cou-config-ele">
+										<label>Border</label>
+									</div>
+									<div class="nam-cou-config-ele">
+										<input type="text" class="form-control" ng-model="schema.templateBorder"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="templates" class="tab-pane fade" ng-show="showTemplates" ng-class="{'active':showTemplates, 'in':showTemplates}">
+						  <h3>Templates</h3>
+						  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						</div>
+						<div id="themes" class="tab-pane fade" ng-show="showThemes" ng-class="{'active':showThemes, 'in':showThemes}">
+						  <h3>Menu 2</h3>
+						  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						</div>
+					</div>
+					<div ng-show="editMode && !showTemplates">
+						<div ng-show="showEdit[element.id]" ng-repeat="element in schema.controls track by $index" id="edit_{{element.id}}" class="nam-cou-edit-sec">
+							<common-directive></common-directive>
+						</div>
+					</div>
+				</section>
+				
+				
+			</div>
+			<div class="col-lg-10  col-md-9 col-sm-9 cou-drop-area  nam-com-height"  style="height:{{schema.templateHeight}}px;">
+				<div class="nam-builder-btn-sec pull-left "  id="headerBar" >
+					<button class="btn btn-primary" ng-click="saveEvent()">Save</button>
+					<button class="btn btn-primary" data-toggle='modal' data-target="#layoutModal"  data-backdrop="static" data-keyboard="false">Save Layout</button>
+					<button class="btn btn-danger" data-toggle='modal' data-target="#discard"  data-backdrop="static" data-keyboard="false">Discard</button>
+				</div>
+				<div id="discard" class="modal fade" role="dialog">
+					  <div class="modal-dialog modal-md">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">x</button>
+					        
+					      </div>
+					      <div class="modal-body">
+					        <p>Are you sure you want to discard ?</p>
+					      </div>
+					      <div class="modal-footer">
+					       <button type="button" class="btn btn-default" style=" background-color: #1fb5ad;" data-dismiss="modal" ng-click="reloadPage()">Ok</button>
+					        <button type="button" class="btn btn-default" style=" background-color: #1fb5ad;" data-dismiss="modal">Close</button>
+					      </div>
+					    </div>
+
+					  </div>
+					</div>
+				<div class="modal fade" id="layoutModal" role="dialog">
+				    <div class="modal-dialog modal-md">
+				      <div class="modal-content">
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal" style="color: red;" >x</button>
+				          <h4 class="modal-title">Save Layout</h4>
+				        </div>
+				        <div class="modal-body">
+				          <div style="padding-left:80px;padding-bottom: 10px;"><span style="padding-right:98px;">Layout Type</span><select style="padding-left:20px;" ng-model="validate.layoutTypes" ng-options="item for item in types"></select></div>
+				          <div style="padding-left:80px;padding-bottom: 10px;"><span style="padding-right:90px;">Layout Name</span><input type="text" name="name" ng-model="validate.layoutName">
+				         <div ng-show="validate.errorMsg">
+				         	<p style="color:red;">Template name already exists. Please give a different name</p>
+				         </div>
+				         <div style="padding-left:170px;" ng-show="validate.emptyMsg">
+				         	<p style="color:red;">Please enter Template name</p>
+				         </div>
+				          </div>
+
+				          <div style="padding-left:80px;"><i style="padding-left:50px;"><input type="checkbox" name="Mark as Default" ng-model="validate.default" value="default" ng-checked="true"><label for="default">Mark as Default</label></i><i style="padding-left:50px;"><input type="checkbox" name="Mark as Default" ng-model="validate.active" value="active" ng-checked="true"><label for="active">Mark as Active</label></i></div>
+				        </div>
+				        <div class="modal-footer">
+				          <div style="text-align: center;"><button  id="button_validate"  type="button" style=" background-color: #1fb5ad;" class="btn btn-default" ng-click="saveTemplate()">Save</button></div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				 
+				<div class="nam-temp-gridster" droppable id="nam-gridster" ng-attr-style="height:{{schema.templateHeight}}px;width:{{schema.templateWidth}}%;border:{{schema.templateBorder}}px solid; 
+				max-height: {{schema.templateHeight}}px;
+				max-width:{{schema.templateWidth}}%;  position: relative;overflow: hidden; ">
+					<p class="hide" style="overflow:hidden;font-size:12px;width:100%;height:13px;margin:0 20px"><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span></p>
+					<p class="hide"  style="overflow:hidden;font-size:12px;position:absolute;bottom:0;width:100%;height:13px;margin:0 20px"><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span></p>
+					<p class="hide"  style="overflow:hidden;font-size:12px;transform: rotate(90deg);position:relative;left:49%;top:50%;height:13px"><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span></p>
+					<p class="hide"  style="overflow:hidden;font-size:12px;transform: rotate(-90deg);position:relative;right:49%;height:13px;top:41%;"><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span><span>text </span></p>
+				  
+					<div resizable draggable-element class="cou-component" ng-repeat="element in schema.controls track by $index" cusId="{{$index}}" id="{{element.id}}" ng-attr-style="position:absolute;width:{{element.width}}%;top:{{element.top}}px;left:{{element.left}}px;z-index:{{element.zindex}};border:{{element.border}}px {{element.borderStyle}} {{element.borderColor}};box-sizing: content-box;">
+                        
+						<div class="nam-temp-config-icons" >
+							<span class="cou-con-icon" ng-click="removeElement($index)"><i class="fa fa-trash" aria-hidden="true" ng-hide="element.isPartner==true||element.isOffer==true" ></i></span>
+							<span class="cou-con-icon" ng-click="cloneElement($index)"><i class="fa fa-clone" aria-hidden="true" ng-hide="element.isPartner==true||element.isOffer==true"></i></span>
+							<span class="cou-con-icon" ng-click="toggleProperty(element.id, element.type)"><i class="fa fa-wrench" aria-hidden="true" ></i></span>
+						</div>
+						<div ng-switch="element.type" style="overflow:hidden">
+							<div ng-switch-when="product" coupon-product-directive></div>
+							<div ng-switch-when="pinNumber" coupon-pin-number-directive></div>
+							<div ng-switch-when="offerHeading" coupon-offer-heading-directive></div>
+							<div ng-switch-when="offerDescription" coupon-offer-description-directive></div>
+							<div ng-switch-when="offerId" coupon-offerid-directive></div>
+							<div ng-switch-when="expiryDate" coupon-expiry-date-directive></div>
+							<div ng-switch-when="conMsg" coupon-consumer-message-directive></div>
+							<div ng-switch-when="barCode" coupon-barcode-directive></div>
+							<div ng-switch-when="retMsg" coupon-retailer-message-directive></div>
+							<div ng-switch-when="watermark" coupon-watermark-directive></div>
+							<div ng-switch-when="text" coupon-text-directive></div>
+							<div ng-switch-when="discount" coupon-discount-directive></div>
+							<div ng-switch-when="couBorder" coupon-border-directive></div>
+							<div ng-switch-when="Button" coupon-button-directive></div>
+							<div ng-switch-when="codeBlock" coupon-code-block-directive></div>
+							<div ng-switch-when="facebook"  facebook-share-directive></div>
+							<div ng-switch-when="twitter"  twitter-share-directive></div>
+							<div ng-switch-when="email"  email-share-directive></div>
+							<div ng-switch-when="Header"  coupon-header-directive></div>
+							<div ng-switch-when="Footer"  coupon-footer-directive></div>
+							<div ng-switch-when="POD" coupon-pod-directive></div>
+							<div ng-switch-when="totalSaving" coupon-total-saving-directive></div>
+							<div ng-switch-when="container" coupon-container-directive></div>
+							<div ng-switch-when="backgroundAdd" coupon-background-add-directive></div>
+							<div ng-switch-when="mediumAdd" coupon-medium-add-directive></div>
+							<div ng-switch-when="seperatorAdd" coupon-seperator-add-directive></div>
+							<div ng-switch-when="facebookLink" coupon-facebook-link-directive></div>
+							<div ng-switch-when="twitterLink" coupon-twitter-link-directive></div>
+							<div ng-switch-when="EmailSubscription" coupon-email-news-subscription-directive></div>
+							<div ng-switch-when="MobileLink" coupon-mobile-link-directive></div>
+							<div ng-switch-when="Zipcode" coupon-zipcode-filter-directive></div>
+							<div ng-switch-when="category" coupon-category-filter-directive></div>
+						</div>
+
+
+					</div>
+                    
+				  
+				</div>
+				<div  ng-show="dragItem.displayName==POD" class="social"  ng-style="isClipped && {'background-color':'#ca2128'} || {'background-color': '#e5e5e5'}"
+				ng-attr-style="height:50px;width:{{schema.templateWidth}}%;border:{{schema.templateBorder}}px solid; " social-network-directive ></div>
+				
+				
+			</div>
+			
+		</section> 
+
+</body>
+
+</html>

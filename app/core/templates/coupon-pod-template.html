@@ -1,0 +1,48 @@
+<div style="max-height:{{element.height}}px; height:{{element.height}}px;
+overflow: hidden;
+     ">
+<div ><p>{{element.content[0]}}</p></div>
+
+<div class="nam-cou-field-image" >
+<!-- 	<img src="{{elementContents[element.type]}}" alt="image"/> -->
+<img src="{{element.content[1]}}" alt="image" />
+</div>
+<div><p>{{element.content[2]}}</p></div>
+</div>
+<div style="height:30px; 
+     " ng-style="isClipped && {'background-color':'#ca2128'} || {'background-color': '#e5e5e5'}">
+<span style="padding:5px;"><a href="#" socialshare socialshare-provider="facebook" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="">
+<i class="fa fa-facebook-official" style="transform:scale(1.5,1.5);padding-top: 5px;"></i>
+</a></span>
+<span style="padding:5px;"><a href="#" socialshare socialshare-provider="twitter" socialshare-text="720kb AngularJS Socialshare" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="https://www.healthyessentials.com/coupons/save-1-johnsons-desitin"><i class="fa fa-twitter" aria-hidden="true" style="transform: scale(1.5,1.5);padding-top: 5px;"></i>
+
+</a></span>
+<span  style="padding:5px; cursor: pointer;" ><i class="fa fa-envelope" aria-hidden="true"  data-toggle="modal" data-target="#myModal" style="transform: scale(1.5,1.5);padding-top: 5px;"></i></span>
+
+<span    style="float: right; " ><label  ng-show="!isClipped" ng-click="isClipped=true" style="padding-right: 5px"  >CLIP</label><label  ng-show="isClipped" style="padding-right: 5px" ng-click="isClipped=false"  >CLIPPED</label><input  type="checkbox" id="check"  ng-change="Clipped(isClipped)" ng-model="isClipped" ></span>
+</div>
+
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div style="background-color: red;">
+        <h4 class="modal-title" style="font-size: 18px;color: white;padding:5px">Smart Source</h4>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

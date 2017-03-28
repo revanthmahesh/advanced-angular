@@ -1,0 +1,138 @@
+<section class="nam-cou-edit-container name" >
+	<div class="nam-cou-edit-save-btn" style="margin-top: 30px;">
+		<button type="button" class="btn btn-primary pull-right" ng-click="saveEvent(element.id, element.type)">Save and Close</button>
+	</div>
+	<div ng-if="configFields[element.type].label" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Label </label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<input type="text" class="form-control" ng-model="element.displayName"/>
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].browseImage" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Choose File</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<input type="file" fileread="elementContents[element.type]" class="form-control" ng-model="elementContents[element.type]"/>
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].labelPosition" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Label Position</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<select class="form-control m-bot15" ng-model="element.labelPos" ng-change="changeLabelEvent(element, element.labelPos)">
+				<option value='left'>left</option>
+				<option value="top" selected>top</option>
+				<option value="bottom">bottom</option>
+				<option value="right">right</option>
+			</select>
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].content" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Content</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<input type="text" class="form-control" ng-model="elementContents[element.type]"/>{{}}
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].fontSize" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Font Size</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<input type="number" class="form-control" ng-model="element.fontSize"/>
+		</div>
+	</div>
+	<div class="nam-cou-config-sec" ng-if="configFields[element.type].fontColor">
+		<div class="nam-cou-config-ele">
+			<label >Font color</label>
+		</div>
+		<div class="nam-cou-config-ele ">
+			<input type="text" class="form-control" colorpicker="rgba"  ng-model="element.fontColor"/>
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].fontStyle" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Font Style</label>
+		</div>
+		<div class="nam-cou-config-ele nam-temp-check">
+			<select class="form-control m-bot15" ng-model="element.fontStyle">
+				<option value="italic">italic</option>
+				<option value="normal" selected>normal</option>
+				<option value="oblique">oblique</option>
+			</select>
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].decoration" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Text Decoration</label>
+		</div>
+		<div class="nam-cou-config-ele nam-temp-check">
+			<select class="form-control m-bot15" ng-model="element.decoration">
+				<option value="overline">overline</option>
+				<option value="line-through">line-through</option>
+				<option value="underline">underline</option>
+				<option value="none">none</option>
+			</select>
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].fontWeight" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Font Weight</label>
+		</div>
+		<div class="nam-cou-config-ele nam-temp-check">
+			<select class="form-control m-bot15" ng-model="element.fontWeight">
+				<option>bold</option>
+				<option selected>normal</option>
+			</select>
+		</div>
+	</div>
+	<div class="nam-cou-config-sec" ng-if="configFields[element.type].border">
+		<div class="nam-cou-config-ele">
+			<label >Border</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<input type="text" class="form-control" ng-model="element.border"/>
+		</div>
+	</div>
+	<div class="nam-cou-config-sec" ng-if="configFields[element.type].borderColor">
+		<div class="nam-cou-config-ele">
+			<label >Border Color</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<input type="text" class="form-control" colorpicker ng-model="element.borderColor"/>
+		</div>
+	</div>
+	<div ng-if="configFields[element.type].borderStyle" class="nam-cou-config-sec">
+		<div class="nam-cou-config-ele">
+			<label >Border Style</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<select class="form-control m-bot15" ng-model="element.borderStyle">
+				<option>Dashed</option>
+				<option selected>Solid</option>
+				<option>Dotted</option>
+			</select>
+		</div>
+	</div>	
+	<div class="nam-cou-config-sec" ng-if="configFields[element.type].backgroundColor">
+		<div class="nam-cou-config-ele">
+			<label >Back-Ground color</label>
+		</div>
+		<div class="nam-cou-config-ele ">
+			<input type="text" class="form-control" colorpicker="rgba"  ng-model="element.backgroundColor"/>
+		</div>
+	</div>
+	<div class="nam-cou-config-sec" ng-if="configFields[element.type].zindex">
+		<div class="nam-cou-config-ele">
+			<label >Z-Index</label>
+		</div>
+		<div class="nam-cou-config-ele">
+			<input type="text" class="form-control" ng-model="element.zindex"/>
+		</div>
+	</div>
+</section>
